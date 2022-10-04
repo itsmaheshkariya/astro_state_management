@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HelloVue from "../components/HelloVue.vue";
+import HelloReact from '../components/HelloReact'
+import HelloSvelte from "../components/HelloSvelte.svelte";
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<HelloVue  client:visible/>
+		<HelloReact client:visible/>
+		<HelloSvelte client:visible />
+	</main>
+</Layout>
+
+<style>
+	:global(.card) {
+		margin: 1rem;
+	}
+</style>
